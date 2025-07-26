@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'NyaaTitleFont';
+    src: url('/fonts/titleFont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MadaneSubheadingFont';
+    src: url('/fonts/subheadingFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes floatEffect {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.title-page-title {
+    font-family: 'NyaaTitleFont', sans-serif;
+    color: #e6e6fa; /* soft lavender */
+    font-size: 150px;
+    margin-bottom: 0;
+    margin-top: -30px;
+    text-shadow:
+            0 0 5px #c8a2c8,    /* gentle pinkish-purple */
+            0 0 10px #dda0dd,   /* pale violet glow */
+            0 0 15px #ba55d3,   /* medium orchid */
+            0 0 20px #9370db,   /* lavender purple depth */
+            0 0 25px #8a2be2;   /* vibrant indigo shimmer*/
+    animation: floatEffect 3s ease-in-out infinite;
+}
+
+.title-page-subheading {
+    color: #e6e6fa;
+    margin-top: 150px;
+    margin-bottom: -90px;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: center;
+
+    /* Subtle glow to lift it from background */
+    text-shadow:
+            0 0 4px rgba(255, 255, 255, 0.3),
+            0 0 8px rgba(230, 230, 250, 0.5);
+}
+
+.start-btn {
+    font-family: 'MadaneSubheadingFont', sans-serif;
+    background-color: #9845ea;
+    font-size: 50px;
+    color: #efe4ef;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-bottom: 5px;
+
+    /* Lift effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    /* Smooth animation */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 25px rgba(152, 69, 234, 0.6); /* Glowy shadow on hover */
+}
+
+.title-page-bg {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url('/home-page.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}

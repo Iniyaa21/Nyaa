@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'MadaneSubheadingFont';
+    src: url('/fonts/subheadingFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.task-display-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: url('/third-page.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-display-container {
+    background: rgba(30, 30, 30, 0.55); /* glassy greyish black */
+    border-radius: 16px;
+    padding: 32px 24px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.task-display-container h2{
+    font-family: 'MadaneSubheadingFont', sans-serif;
+    font-size: 50px;
+}
+
+.task-item-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    margin: 0 0 24px 0 !important;
+    padding: 0;
+    opacity: 1;
+    border-radius: 4px;
+    background: none;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.task-item-row.completed {
+    opacity: 0.5;
+}
+
+.task-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    accent-color: #4caf50;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.task-xp-input {
+    width: 56px;
+    margin-left: 8px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    /* Remove number input arrows for Chrome, Safari, Edge */
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Remove number input arrows for Firefox */
+.task-xp-input::-webkit-outer-spin-button,
+.task-xp-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.task-xp-input[type=number]::-webkit-inner-spin-button,
+.task-xp-input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.task-xp-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.task-xp-label {
+    color: #fff;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+@media (min-width: 400px) {
+    .task-item-row {
+        gap: 8px;
+    }
+    .task-xp-input {
+        margin-left: 0;
+    }
+    .task-text {
+        margin-right: 8px;
+    }
+}
+.total-xp{
+    font-family: 'MadaneSubheadingFont', sans-serif;
+    font-size: 30px;
+}
